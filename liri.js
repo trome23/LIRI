@@ -2,22 +2,21 @@ require("dotenv").config();
 
 var Spotify = require('node-spotify-api');
 var keys = require("./keys.js");
+var axios = require("axios");
 
 var spotify = new Spotify(keys.spotify);
-// console.log(process.argv);
 
 var command = process.argv[2];
 var input = process.argv[3];
-
 
 switch(command) {
     case "spotify-this-song": 
         if (input === undefined) {
             input= "The Sign, Ace of base";
         }          
-        spotify.search({ type: 'track', query: input, limit: 10}) 
+        spotify.search({ type: 'track', query: input, limit: 3}) 
         .then(function(response) {       
-            // console.log(response.tracks);    
+            //console.log(response.tracks);    
             for (var i = 0; i < response.tracks.items.length; i++) {
                 console.log("Artists: " + response.tracks.items[i].artists[0].name); 
                 console.log("Song Title: "+ response.tracks.items[i].name); 
@@ -28,11 +27,37 @@ switch(command) {
             }
         })          
         .catch(function(err) {
-            console.log(err) 
+            return console.log('Error occurred: ' + err);
           });
-        
-        
-
         break;
+    
+    case "movie-this":
+        if (input === undefined) {
+            input= "Mr. Nobody";
+        }   
+        var apiKey= "trilogy";
+        var queryUrl = "http://www.omdbapi.com/?t=" + input + "&apikey=" + apiKey;
+        
+        axios.get(queryUrl)
+        .then(function(response) {
+            console.log("Movie Title: " + response.data.Title);
+            console.log("Release Year: " + response.data.Year);
+            console.log("IMDB Rating: " + response.data.imdbRating);
+            console.log("Rotten Tomatoes Score: " + response.data.Ratings[1].Value);
+            console.log("Produced in: " + response.data.Country);
+            console.log("Language(s): " + response.data.Language);
+            console.log("Plot: " + response.data.Plot);
+            console.log("Actors: " + response.data.Actors);
+            }
+        )
+        .catch(function (error) {
+            console.log(error);
+          });    
+    break;
+
+    case "concert-this":
+
+    break;
+          
     
 }

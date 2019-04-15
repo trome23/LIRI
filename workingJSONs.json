@@ -240,7 +240,111 @@ SPOTIFY:
 
 
 OMDB: 
-
+node liri.js movie-this "titanic"
+this is loaded
+{
+  "Title": "Remember the Titans",
+  "Year": "2000",
+  "Rated": "PG",
+  "Released": "29 Sep 2000",
+  "Runtime": "113 min",
+  "Genre": "Biography, Drama, Sport",
+  "Director": "Boaz Yakin",
+  "Writer": "Gregory Allen Howard",
+  "Actors": "Denzel Washington, Will Patton, Wood Harris, Ryan Hurst",
+  "Plot": "The true story of a newly appointed African-American coach and his high school team on their first season as a racially integrated unit.",
+  "Language": "English",
+  "Country": "USA",
+  "Awards": "8 wins & 17 nominations.",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BYThkMzgxNjEtMzFiOC00MTI0LWI5MDItNDVmYjA4NzY5MDQ2L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+  "Ratings": [
+    {
+      "Source": "Internet Movie Database",
+      "Value": "7.8/10"
+    },
+    {
+      "Source": "Rotten Tomatoes",
+      "Value": "73%"
+    },
+    {
+      "Source": "Metacritic",
+      "Value": "48/100"
+    }
+  ],
+  "Metascore": "48",
+  "imdbRating": "7.8",
+  "imdbVotes": "183,192",
+  "imdbID": "tt0210945",
+  "Type": "movie",
+  "DVD": "20 Mar 2001",
+  "BoxOffice": "$114,297,071",
+  "Production": "Walt Disney Pictures",
+  "Website": "http://disney.go.com/disneypictures/rememberthetitans/index.html",
+  "Response": "True"
+}
 
 
 BANDS IN TOWN: 
+[ { id: '1014398045',
+    artist_id: '4670200',
+    url:
+     'https://www.bandsintown.com/e/1014398045?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event',
+    on_sale_datetime: '',
+    datetime: '2019-08-02T11:00:00',
+    description: '',
+    venue:
+     { country: 'Canada',
+       city: 'Montréal',
+       latitude: '45.5141816',
+       name: 'Parc Jean-Drapeau',
+       region: '',
+       longitude: '-73.5337682' },
+    lineup: [ 'joji' ],
+    offers: [ [Object] ] },
+  { id: '1013595380',
+    artist_id: '4670200',
+    url:
+     'https://www.bandsintown.com/e/1013595380?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event',
+    on_sale_datetime: '2019-02-02T10:00:00',
+    datetime: '2019-08-16T19:00:00',
+    description:
+     'Though Lowlands covers a wide spectrum of different cultural activities, the main focus still is on alternative music: from rock to pop via hip hop; from metal to electro via world music and hereby not neglecting drum \'n bass, house and techno. Acts announced for Lowlands 2019 so far: TAME IMPALA; TWENTY ONE PILOTS; THE PRODIGY; A$AP ROCKY; ANDERSON .PAAK & THE FREE NATIONALS; THE NATIONAL; NEW ORDER; ROYAL BLOOD; ANNE-MARIE; BILLIE EILISH; FRANZ FERDINAND; GIORGIO MORODER; THE GOOD, THE BAD & THE QUEEN; JON HOPKINS; JORJA SMITH; PAUL KALKBRENNER; RONNIE FLEX & DEUXPERIENCE; AGORIA (LIVE); ANTAL; DENZEL CURRY; FKJ; FRANK TURNER AND THE SLEEPING SOULS; HELENA HAUFF; HONEY DIJON; HUNEE; JOJI; JUNGLE; JUNGLE BY NIGHT; MALL GRAB; MARCEL DETTMANN; MY BABY; PARCELS; THE STREETS;THOMAS AZIER; WEVAL; WILLEM; ZIGGY MARLEY Plus more to come…',
+    venue:
+     { country: 'United Kingdom',
+       city: 'Netherlands',
+       name: 'Evenemententerrein Walibi Holland',
+       region: '' },
+    lineup: [ 'joji' ],
+    offers: [ [Object] ] },
+  { id: '1013610138',
+    artist_id: '4670200',
+    url:
+     'https://www.bandsintown.com/e/1013610138?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event',
+    on_sale_datetime: '2018-11-13T02:15:28',
+    datetime: '2019-08-22T08:00:00',
+    description: '',
+    venue:
+     { country: 'United Kingdom',
+       city: 'Reading',
+       latitude: '51.4538',
+       name: 'Richfield Avenue, Reading',
+       region: '',
+       longitude: '-0.97376' },
+    lineup: [ 'joji' ],
+    offers: [ [Object] ] },
+  { id: '1014218755',
+    artist_id: '4670200',
+    url:
+     'https://www.bandsintown.com/e/1014218755?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event',
+    on_sale_datetime: '2019-03-13T17:32:00',
+    datetime: '2019-08-23T09:30:00',
+    description: '',
+    venue:
+     { country: 'United Kingdom',
+       city: 'Reading',
+       latitude: '51.4538',
+       name: 'Richfield Avenue, Reading',
+       region: '',
+       longitude: '-0.97376' },
+    lineup: [ 'joji' ],
+    offers: [ [Object] ] } ]

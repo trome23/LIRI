@@ -4,7 +4,7 @@ var Spotify = require('node-spotify-api');
 var keys = require("./keys.js");
 
 var spotify = new Spotify(keys.spotify);
-console.log(process.argv);
+// console.log(process.argv);
 
 var command = process.argv[2];
 var input = process.argv[3];
@@ -13,9 +13,9 @@ var input = process.argv[3];
 switch(command) {
     case "spotify-this-song": 
         if (input === undefined) {
-            input= "The Sign";
+            input= "The Sign, Ace of base";
         }          
-        spotify.search({ type: 'track', query: input, limit: 5}) 
+        spotify.search({ type: 'track', query: input, limit: 10}) 
         .then(function(response) {       
             // console.log(response.tracks);    
             for (var i = 0; i < response.tracks.items.length; i++) {

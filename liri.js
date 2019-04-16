@@ -32,7 +32,7 @@ function liri() {
             .catch(function(err) {
                 return console.log('Error occurred: ' + err);
             });
-            break;
+        break;
         
         case "movie-this":
             if (input === undefined) {
@@ -63,11 +63,19 @@ function liri() {
                 
             axios.get(queryUrl)
             .then(function(response) {
-                // console.log(response.data);
+                // console.log(response);
+                
+                if(response.data.length === 0) {
+                    console.log("There aren't any shows coming up!");
+                } else {
+                console.log("Artist: " + response.data[0].lineup[0]);
                 console.log("Venue Name: " + response.data[0].venue.name);
                 console.log("Venue Location: " + response.data[0].venue.city + ", " + response.data[0].venue.country);
                 console.log("Date of Event: " + moment(response.data[0].venue.datetime).format("MM/DD/YYYY"));
-                }
+                }       
+            }
+                
+                
             )
             .catch(function (error) {
                 console.log(error);
